@@ -43,7 +43,7 @@
     </article>
 </section> -->
 
-<section class="event-binding">
+<!-- <section class="event-binding">
     <article>
         <h3>Event-binding</h3>
         <div>
@@ -72,6 +72,52 @@
                 Passe o mouse sobre mim
             </span>
             
+        </div>
+    </article>
+</section> -->
+
+<section class="two-way-binding">
+    <article>
+        <div class="container">
+            <h3>Two-way data-binding</h3>
+            <div class="row">
+                <div class="col-lg-4">
+                    <input type="text" class="form-control"
+                    [value]="nome"
+                    (input)="nome = $event.target.value"
+                    />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <input type="text" class="form-control"
+                    [ngModel]="nome"
+                    (ngModelChange)="nome = $event"
+                    />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4"> 
+                    <input type="text" class="form-control"
+                    [(ngModel)]="nome"
+                    />
+                </div>
+            </div>
+
+            <div class="row">
+                <p>Você digitou: {{ nome }}</p>
+            </div>
+
+            <div class="row">
+                <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos</p>
+            </div>
+
+            <div class="row">
+                <input type="text" [(ngModel)]="pessoa.nome">
+                <input type="text" [(ngModel)]="pessoa.idade">
+            </div>
         </div>
     </article>
 </section>
