@@ -76,7 +76,7 @@
     </article>
 </section> -->
 
-<section class="two-way-binding">
+<!-- <section class="two-way-binding">
     <article>
         <div class="container">
             <h3>Two-way data-binding</h3>
@@ -120,4 +120,25 @@
             </div>
         </div>
     </article>
-</section>
+</section> -->
+
+<!-- <section class="input-output-properties">
+    <article>
+        <div class="container">
+            <h3>Input/Ouput Properties</h3>
+
+            <app-input-property [nome]="nomeDoCurso"></app-input-property>
+        </div>
+    </article>
+</section> -->
+<div class="container">
+    <section class="input-output-properties">
+        <article>
+            <h3>Input/Output Properties</h3>
+
+            <app-input-property [nome]="nomeDoCurso" (mudouValor)="onMudouValor($event)"></app-input-property>
+
+            <app-output-property [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></app-output-property>
+        </article>
+    </section>
+</div>
